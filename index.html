@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sithara! 📚🥑🎃</title>
+    <meta name="description"
+        content="A cozy personal birthday card crafted with love for Sithara - book lover, avocado & pumpkin enthusiast.">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Custom Cursor Sparkle Dot -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+
+    <!-- Floating Background Canvas for Avocado, Pumpkin & Sparkle Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Glassmorphic Header Nav -->
+    <header class="header">
+        <a href="#" class="brand-logo">
+            <span class="logo-badge">🥑</span>
+            <span class="brand-name">Sithara's Card</span>
+        </a>
+
+        <div class="nav-controls">
+            <!-- Navigation Links (Desktop) -->
+            <nav class="nav-links">
+                <a href="#gallery" class="nav-link">Memories</a>
+                <a href="#cake" class="nav-link">Cake</a>
+                <a href="#nook" class="nav-link">Surprises</a>
+            </nav>
+
+            <!-- Audio Player Toggle -->
+            <button id="music-toggle" class="btn-control music-toggle" title="Toggle Cozy Lofi Music">
+                <i data-lucide="music"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - PERSONAL DIGITAL BIRTHDAY CARD -->
+    <section class="hero-section">
+        <div class="container">
+
+            <!-- Card Ribbon Badge -->
+            <div id="wax-seal" class="hero-envelope-seal" title="Click to open your special birthday letter!">
+                <span>✉️</span>
+                <span>Tap Seal to Read Birthday Note</span>
+            </div>
+
+            <h1 class="hero-title">
+                Happy Birthday <br>
+                <span class="highlight">Dearest Sithara</span> ✨
+            </h1>
+
+            <!-- Sinhala Font Main Birthday Wish for Sithara using fontoshan.ttf -->
+            <h2 class="hero-title-sinhala">
+                සුබ උපන්දිනයක් වේවා සිතාරා 🌸
+            </h2>
+
+            <p class="hero-subtitle">
+                "May your new year of life be as cozy as a warm blanket, as rich as a library of timeless stories, and
+                as delightful as pumpkin spice & fresh avocados."
+            </p>
+
+            <!-- INTERACTIVE DESK PROPS -->
+            <div class="props-container">
+                <!-- Prop 1: Avocado -->
+                <div id="prop-avocado" class="prop-interactive" data-type="avocado">
+                    <span class="prop-icon">🥑</span>
+                    <div class="prop-text">
+                        <div class="prop-title">Avocado</div>
+                        <small class="prop-sub">Slice open!</small>
+                    </div>
+                </div>
+
+                <!-- Prop 2: Pumpkin Latte -->
+                <div id="prop-pumpkin" class="prop-interactive" data-type="pumpkin">
+                    <span class="prop-icon">🎃</span>
+                    <div class="prop-text">
+                        <div class="prop-title">Pumpkin Spice</div>
+                        <small class="prop-sub">Warm steam!</small>
+                    </div>
+                </div>
+
+                <!-- Prop 3: Stack of Books -->
+                <div id="prop-books" class="prop-interactive" data-type="books">
+                    <span class="prop-icon">📚</span>
+                    <div class="prop-text">
+                        <div class="prop-title">Book Nook</div>
+                        <small class="prop-sub">Read quote!</small>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#gallery" class="btn-primary">
+                <span>Explore Birthday Card</span>
+                <i data-lucide="sparkles"></i>
+            </a>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span>🥑</span>
+        <span>📖</span>
+        <span>🎃</span>
+    </div>
+
+    <!-- SECTION 1: CATEGORIZED MEMORY PHOTO GALLERY -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Your Scrapbook</p>
+                <h2 class="section-title">Gallery of Precious Memories</h2>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-category="all">
+                    <span>All Photos</span>
+                </button>
+                <button class="filter-btn" data-category="personal">
+                    <span>👑 Your Moments</span>
+                </button>
+                <button class="filter-btn" data-category="favorites">
+                    <span>🥑🎃 Avocados & Pumpkins</span>
+                </button>
+                <button class="filter-btn" data-category="books">
+                    <span>📚 Cozy Book Aesthetics</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Polaroid Photo Grid -->
+            <div id="gallery-grid" class="gallery-grid">
+                <!-- Javascript will inject categorized polaroids dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <span>✨</span>
+        <span>🎂</span>
+        <span>✨</span>
+    </div>
+
+    <!-- SECTION 2: INTERACTIVE BIRTHDAY CAKE & BLOWABLE CANDLE -->
+    <section id="cake" class="cake-section">
+        <div class="container">
+            <div class="cake-card">
+                <p class="section-tag">Celebration Time</p>
+                <h2 class="section-title" style="margin-bottom: 20px;">Make a Wish, Sithara!</h2>
+
+                <!-- Interactive SVG / CSS Birthday Cake -->
+                <div id="cake-container" class="cake-container" title="Click to blow candle out!">
+                    <div class="candle">
+                        <div id="candle-flame" class="flame"></div>
+                    </div>
+                    <div class="cake-layer-top">
+                        <div class="cake-frosting"></div>
+                    </div>
+                    <div class="cake-layer-middle"></div>
+                    <div class="cake-base"></div>
+                </div>
+
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+                    (Tap the candle or click the button below to blow out your candle & unlock your birthday wish!)
+                </p>
+
+                <div class="cake-btn-group">
+                    <button id="blow-candle-btn" class="btn-primary">
+                        <span>Blow Candle & Celebrate!</span>
+                        <i data-lucide="sparkles"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: COZY BOOK NOOK & SURPRISES -->
+    <section id="nook" class="nook-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Birthday Surprises</p>
+                <h2 class="section-title">The Cozy Nook</h2>
+            </div>
+
+            <div class="nook-grid">
+                <!-- Card 1: Avocado Toast -->
+                <div class="nook-card" data-icon="🥑" data-title="Avocado Goodness"
+                    data-msg="Sithara, you bring fresh energy and positive warmth to everyone around you, just like fresh avocado on a sunny morning!">
+                    <div class="nook-icon">🥑</div>
+                    <h3 class="nook-card-title">Avocado Bliss</h3>
+                    <p class="nook-card-body">Click to reveal a fresh secret note...</p>
+                </div>
+
+                <!-- Card 2: Pumpkin Spice -->
+                <div class="nook-card" data-icon="🎃" data-title="Pumpkin Spice Warmth"
+                    data-msg="May your life be filled with sweet pumpkin spice warmth, cozy oversized sweaters, and golden autumn memories, Sithara!">
+                    <div class="nook-icon">🎃</div>
+                    <h3 class="nook-card-title">Pumpkin Spice Warmth</h3>
+                    <p class="nook-card-body">Click to reveal a warm autumn secret...</p>
+                </div>
+
+                <!-- Card 3: Vintage Library -->
+                <div class="nook-card" data-icon="📚" data-title="Infinite Stories"
+                    data-msg="'There is no friend as loyal as a book.' - Ernest Hemingway. Wishing you endless chapters of peace & happiness, Sithara!">
+                    <div class="nook-icon">📚</div>
+                    <h3 class="nook-card-title">Vintage Library</h3>
+                    <p class="nook-card-body">Click to reveal a literary quote...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-hearts">🥑 📚 💖 🎃</div>
+            <p class="footer-text">Handcrafted with Love & Magic for Dearest Sithara</p>
+            <p class="footer-text" style="margin-top: 4px; font-size: 0.8rem;">© Happy Birthday Sithara • Personal Card
+                Edition</p>
+        </div>
+    </footer>
+
+    <!-- MOBILE FLOATING BOTTOM APP DOCK -->
+    <div class="mobile-dock">
+        <a href="#" class="dock-item" title="Home">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#gallery" class="dock-item" title="Memories">
+            <i data-lucide="image"></i>
+            <span>Gallery</span>
+        </a>
+        <a href="#cake" class="dock-item" title="Cake">
+            <i data-lucide="cake"></i>
+            <span>Cake</span>
+        </a>
+        <a href="#nook" class="dock-item" title="Surprises">
+            <i data-lucide="gift"></i>
+            <span>Nook</span>
+        </a>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR POLAROID GALLERY -->
+    <div id="lightbox" class="lightbox-modal">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged photo" class="lightbox-img">
+            <div class="lightbox-caption">
+                <p id="lightbox-cap-en" class="caption-en"></p>
+                <p id="lightbox-category" class="caption-category"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECRET QUOTE & BIRTHDAY NOTE MODAL -->
+    <div id="secret-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div id="secret-icon" class="modal-icon">📚</div>
+            <h3 id="secret-title" class="modal-title">Secret Message</h3>
+
+            <!-- Language Switcher Tabs inside Modal -->
+            <div id="modal-lang-tabs" class="modal-lang-tabs"
+                style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                <button id="modal-tab-si" class="btn-control active"
+                    style="font-size: 0.85rem; padding: 6px 16px;">සිංහල 🌸</button>
+                <button id="modal-tab-en" class="btn-control" style="font-size: 0.85rem; padding: 6px 16px;">English
+                    ✉️</button>
+            </div>
+
+            <p id="secret-si" class="modal-body-sinhala"></p>
+            <p id="secret-en" class="modal-body-en" style="display: none;"></p>
+
+            <button id="secret-close" class="btn-primary">
+                <span>Close Note</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- BIRTHDAY WISH MODAL (TRIGGERED BY CANDLE BLOW) -->
+    <div id="wish-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon">🎉 🎂 💖</div>
+            <h3 class="modal-title">Happy Birthday, Sithara! 🎉</h3>
+            <p class="modal-body-en">
+                May all your wishes, dreams, and hopes come true this year, Sithara. Keep reading, keep smiling, and
+                keep glowing!
+            </p>
+            <button id="wish-modal-close" class="btn-primary">
+                <span>Thank You! 🌸</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
