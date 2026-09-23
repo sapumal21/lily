@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openSecretModal(
                 '🎃',
                 'Pumpkin Spice Magic',
-                'ඔබගේ නව වසර පම්කින් ස්පයිස් සුවපහසුවෙන් සහ අමතක නොවන සුන්දර මතකවලින් පිරේවා!',
+                'ඔබගේ නව වසර අමතක නොවන සුන්දර මතකවලින් පිරේවා!',
                 'Cozy vibes unlocked! Background lofi music activated. Enjoy the warm autumn glow!'
             );
         });
@@ -363,8 +363,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!galleryGrid) return;
         galleryGrid.innerHTML = '';
 
-        const filteredPhotos = filterCategory === 'all' 
-            ? galleryPhotos 
+        const filteredPhotos = filterCategory === 'all'
+            ? galleryPhotos
             : galleryPhotos.filter(p => p.category === filterCategory);
 
         filteredPhotos.forEach((photo) => {
