@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openSecretModal(
                 '🥑',
                 'Fresh Avocado Wisdom',
-                'ඔබ ඔබ වටා සිටින සැමටම නැවුම් ශක්තියක් සහ සතුටක් ගෙන දෙන අතිශය විශේෂ කෙනෙකි!',
+                'ඔයා, ඔයාගේ වටේ සිටින සැමටම නැවුම් ශක්තියක් සහ සතුටක් ගෙන දෙන ගොඩක් විශේෂ කෙනෙක්!',
                 'Like a perfectly ripe avocado, you bring pure goodness, warmth, and joy to every single day!'
             );
         });
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openSecretModal(
                 '🎃',
                 'Pumpkin Spice Magic',
-                'ඔබගේ නව වසර අමතක නොවන සුන්දර මතකවලින් පිරේවා!',
+                'ඔයාගේ නව වසර අමතක නොවන සුන්දර මතකවලින් පිරේවා!',
                 'Cozy vibes unlocked! Background lofi music activated. Enjoy the warm autumn glow!'
             );
         });
